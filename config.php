@@ -1,0 +1,7 @@
+<?php 
+
+const DB_HOST = 'localhost';
+const DB_NAME = 'empresa26';
+const DB_USER = 'root';
+const DB_PASS = null;
+const DB_CHARSET = null;
