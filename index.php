@@ -14,18 +14,18 @@ $objClientes = new Clientes();
 $objFuncionarios = new Funcionarios();
 ?>
 
-<table>
+<!-- $ObjSetores = new Setores(); -->
 
-<tr>
-    <td>ID</td>
-    <td>Nome</td>
-    <td>Andar</td>
-    <td>Cor</td>
-    <td>Ação</td>
-</tr>
+<table border="1">
+    <tr>
+        <th>CargoID</th>
+        <th>Nome</th>
+        <th>TetoSalarial</th>
+        <th>Ações</th>
+    </tr>
 
 <?php 
-$resultado = [];
+$resultado = $objSetores->exibirSetores();
 foreach ($resultado as $key => $value) { ?>
 <tr>
     <td><?php echo $value['SetorID']; ?></td>
@@ -45,4 +45,8 @@ foreach ($resultado as $key => $value) { ?>
 <?php  
 }
 ?>
+
+<tr>
+    <td colspan="5"> Total de <?php echo count($resultado); ?> Setor(es) cadastrado(s)</td>
+</tr>
 </table>
